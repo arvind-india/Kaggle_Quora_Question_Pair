@@ -34,11 +34,7 @@ def handle_non_numerical_data(df):
 	return df
 
 df = handle_non_numerical_data(df)
-'''
-with open('data_dump.pickle','rb') as int_string:
-	df = pickle.load(int_string)
-print df
-'''
+
 ft = np.array(df.drop(['is_duplicate'],1))
 lt = np.array(df['is_duplicate'])
 
